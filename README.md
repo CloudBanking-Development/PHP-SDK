@@ -52,11 +52,11 @@ use the CloudBanking PHP SDK.
 $cloud = new Cloud();
   
 $cloud
-	->data('cardnumber', '4444333322221111')
-	->data('cardexpiry', '12/2021')
-	->data('cardname', 'Cloud Payman')
-	->data('customerid', '123456')
-	->addcard();
+  ->data('cardnumber', '4444333322221111')
+  ->data('cardexpiry', '12/2021')
+  ->data('cardname', 'Cloud Payman')
+  ->data('customerid', '123456')
+  ->addcard();
 ```  
 
 ## Response
