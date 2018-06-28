@@ -162,6 +162,41 @@ $cloud->response->success = 1;
 $cloud->response->trxresult = 1;
 ```
 
+### Action Completion and Status
+
+When you run a command, it will set some variables for your to
+indicate if the call was completed and if the action was successful.
+
+If you run a call and both the `completed` and `success` variables
+are `true` then your action was run and completed without errors.
+
+If you receive a `completed` status of true but the `successful`
+variable is false, the `error` message can be found in the `response`
+but also as a standalone variable inside the class named;
+
+```
+$cloud->error
+```
+
+If you are processing a transaction, you can also see the response
+from the bank in the `responsecode` variable in the `response`.
+
+```
+$cloud->response->responsecode
+```
+
+If you receive a `completed` status of false, the cURL command did
+not complete correctly and you can view the `_curl_error` for more
+details of what went wrong.
+
+Normally this will indicate that something is wrong with the cURL
+configuration in your environment as even if an error occurs on
+CloudBanking, we will always return a JSON response with details
+of the error.
+
+
+## Additional Resources
+
 You can view a full set of response variables for a transaction
 on our API documentation found here;
 
