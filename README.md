@@ -121,11 +121,18 @@ they include the following:
 - customer/cards
 - transaction/process
 - transaction/adhoc
-- transaction/refund*
+- transaction/refund
 - transaction/find
 
-*No function is included for refunds in the supplied SDK.
+At the time of this release, only these three endpoints are
+included in the SDK;
 
+- card/add
+- transaction/process
+- transaction/adhoc
+
+You can very easily extend on this library to include additional
+calls and can integrate payments into your CRM.
 
 ## Sample Usage
 
